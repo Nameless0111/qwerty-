@@ -13,6 +13,20 @@ def orto(p):
     except ValueError:
         print("Было введено недоступное значение. Попробуйте ещё раз.")
 
+def rerl07(l,m):
+ while True:
+     try:
+      l = float(input("Введите делимое: "))
+      m = float(input("Введите делитель: "))
+      qz = l
+      qz1 = m
+      if m == 0 :
+       print("Было введено недоступное значение. Попробуйте ещё раз.")
+       continue
+      else:
+       return qz,qz1
+     except ValueError:
+        return print("Было введено недоступное значение. Попробуйте ещё раз.")
 
      
 def rerl(l,m):
@@ -22,7 +36,7 @@ def rerl(l,m):
       m = float(input("Введите второе число: "))
       qz = l
       qz1 = m
-      return qz,m
+      return qz,qz1
      except ValueError:
         return print("Было введено недоступное значение. Попробуйте ещё раз.")
 
@@ -69,7 +83,7 @@ def rerl1(l,m):
       m = float(input("Введите степень: "))
       qp = l
       qz1 = m
-      return qp,m
+      return qp,qz1
      except ValueError:
         return print("Было введено недоступное значение. Попробуйте ещё раз.")
 
@@ -81,13 +95,14 @@ while True:
  print ("1. Сложение")
  print ("2. Вычитание")
  print ("3. Умножение")
- print ("4. Возведение в степень")
- print ("5. Извлечение квадратного корня")
- print ("6. Факториал числа")
- print ("7. Синус угла(в радианах)")
- print ("8. Косинус угла(в радианах)")
- print ("9. Тангенс угла(в радианах)")
- print ("10. Желаете закончить?")
+ print ("4. Деление")
+ print ("5. Возведение в степень")
+ print ("6. Извлечение квадратного корня")
+ print ("7. Факториал числа")
+ print ("8. Синус угла(в радианах)")
+ print ("9. Косинус угла(в радианах)")
+ print ("10. Тангенс угла(в радианах)")
+ print ("11. Желаете закончить?")
  print("ВАЖНО!!! При вводе чисел с плавающей точкой необходимо использовать символ(.)")
  z = orto(e)
  if z == 1:
@@ -103,28 +118,32 @@ while True:
    k = tre * tre1
    print(k)
  elif z == 4:
+   tre,tre1 = rerl07(e,e)
+   k = tre / tre1
+   print(k)
+ elif z == 5:
    tre,tre1 = rerl1(e,e)
    k = tre ** tre1
    print(k)
- elif z == 5 :
+ elif z == 6 :
    tre = rerl0(e)
    k =math.sqrt(tre)
    print(k)
- elif z == 6 :
+ elif z == 7 :
    tre = rerlf(e)
    k =math.factorial(tre)
    print(k)  
- elif z == 7 :
+ elif z == 8 :
    tre = rerl3(e)
    k =math.sin(tre)
    print(k)  
- elif z == 8 :
+ elif z == 9 :
    tre = rerl3(e)
    k =math.cos(tre)
    print(k)  
- elif z == 9 :
+ elif z == 10 :
    tre = rerl3(e)
    k =math.tan(tre)
    print(k)
- elif z == 10 :
+ elif z == 11 :
    break
