@@ -304,7 +304,7 @@ with open('data.json', 'w') as file:
 
 
 
-with open('output.csv', 'a', newline='', encoding='cp1251') as file:
+with open('output.csv', 'a', newline='') as file:
    fieldnames = ['Отношения с Майком:', 'Ловкость:', 'Имя:', 'Пол:', 'Рассудительность:']
    writer = csv.DictWriter(file, fieldnames=fieldnames, delimiter=';')
    writer.writeheader()
